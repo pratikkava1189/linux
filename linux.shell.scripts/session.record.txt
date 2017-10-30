@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#[Record terminal sessions]
+if [ "x$SESSION_RECORD" = "x" ]
+then
+timestamp=`date "+%m%d%Y%H%M"`
+output=/var/log/session/session.$USER.$$.$timestamp
+SESSION_RECORD=started
+export SESSION_RECORD
+script -t -f -q 2>${output}.timing $output
+exit
+fi
