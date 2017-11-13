@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  tasks:
+
+  - name: Create snapshot
+    vmware_guest_snapshot:
+      hostname: 192.168.2.30
+      username: root
+      password: pratik1
+      name: testserver
+      state: present
+      snapshot_name: snap1
+      description: snap1_description
+
