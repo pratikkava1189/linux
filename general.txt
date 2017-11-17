@@ -1,0 +1,3 @@
+*** CIFS ***
+# Command to mount CIFS share to restrict user/group
+# mount -t cifs //abc.example.com/folder1/folder2 /mnt  -o username=testuser,domain=example.com,iocharset=utf8,nounix,file_mode=0774,dir_mode=0775,uid=501,gid=501
